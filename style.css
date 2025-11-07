@@ -1,0 +1,295 @@
+/* === Sección de concientización del cambio climático === */
+:root {
+  --verde-principal: #4CAF50;
+  --verde-oscuro: #2E7D32;
+  --verde-claro: #A5D6A7;
+  --beige: #F1F8E9;
+  --blanco: #FFFFFF;
+  --gris: #555;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--beige);
+  color: var(--gris);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* === Barra de navegación === */
+nav {
+  background: linear-gradient(90deg, var(--verde-oscuro), var(--verde-principal));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  box-shadow: 0 4px 8px var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--verde-claro);
+  transform: scale(1.1);
+}
+
+/* === Encabezado === */
+header {
+  background: linear-gradient(90deg, var(--verde-oscuro), var(--verde-principal));
+  color: var(--blanco);
+  padding: 3rem 1rem;
+  box-shadow: 0 4px 10px var(--sombra);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0;
+  opacity: 0.9;
+}
+
+/* === Contenedor principal === */
+main {
+  max-width: 650px;
+  margin: 3rem auto;
+  background-color: var(--blanco);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px var(--sombra);
+  text-align: center;
+}
+
+/* === Formularios === */
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--verde-oscuro);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #C8E6C9;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--verde-principal);
+  outline: none;
+  box-shadow: 0 0 8px var(--verde-principal);
+}
+
+/* === Botones === */
+button {
+  background: var(--verde-principal);
+  color: var(--blanco);
+  padding: 0.9rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--verde-oscuro);
+  transform: scale(1.05);
+}
+
+/* === Imágenes === */
+img {
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px var(--sombra);
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  color: var(--gris);
+  padding: 1.5rem;
+  margin-top: 4rem;
+  font-size: 0.95rem;
+  background-color: var(--blanco);
+  border-top: 2px solid #E0E0E0;
+}
+
+/* === Animaciones suaves === */
+main, header, nav {
+  animation: fadeIn 0.9s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.conciencia {
+  background-color: #f1f8f4; /* Fondo verde muy claro */
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 3rem auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.conciencia h2 {
+  color: #2e7d32; /* Verde oscuro natural */
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+}
+
+.contenedor-textos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 1.8rem;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.tarjeta h3 {
+  color: #388e3c;
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+}
+
+.tarjeta p,
+.tarjeta li {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.tarjeta ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+/* Botón */
+.btn-clima {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-clima:hover {
+  background-color: #2e7d32;
+  transform: scale(1.05);
+}
+.resultado-container {
+  text-align: center;
+  margin: 4rem auto;
+  padding: 2rem;
+  max-width: 700px;
+}
+
+.resultado-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.resultado-card h2 {
+  color: #2e7d32;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.resultado-card p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.mensaje {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.mensaje.verde { color: #2e7d32; }
+.mensaje.amarillo { color: #f9a825; }
+.mensaje.rojo { color: #c62828; }
+
+.btn-volver {
+  display: inline-block;
+  background-color: #43a047;
+  color: white;
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-volver:hover {
+  background-color: #2e7d32;
+  transform: scale(1.05);
+}

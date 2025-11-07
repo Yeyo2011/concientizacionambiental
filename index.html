@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula tu Huella de Carbono</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="#concientizacion">Concientización</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <header>
+        <h1>🌿 Calcula tu Huella de Carbono</h1>
+        <p>Descubre el impacto de tus hábitos y aprende cómo reducirlo.</p>
+    </header>
+
+    <main>
+        <img src="{{ url_for('static', filename='nature.jpg') }}" alt="Naturaleza">
+        <form action="/resultado" method="POST">
+
+            <label>Medio de transporte principal:</label>
+            <select name="transporte" required>
+                <option value="0.5">Bicicleta o caminar</option>
+                <option value="2.0">Transporte público</option>
+                <option value="5.0">Auto particular</option>
+            </select>
+
+            <label>Consumo energético del hogar:</label>
+            <select name="energia" required>
+                <option value="1.0">Bajo (focos LED, ahorro de agua, etc.)</option>
+                <option value="3.0">Medio</option>
+                <option value="6.0">Alto (uso constante de aire acondicionado, etc.)</option>
+            </select>
+
+            <label>Consumo de productos:</label>
+            <select name="consumo" required>
+                <option value="1.0">Bajo (recicla, compra responsable)</option>
+                <option value="3.0">Medio</option>
+                <option value="5.0">Alto (mucho desperdicio, compras frecuentes)</option>
+            </select>
+
+            <button type="submit">Calcular huella</button>
+        </form>
+    </main>
+
+    <!-- 🌍 Sección de concientización -->
+    <section id="concientizacion" class="conciencia">
+        <h2>🌍 Concientización sobre el Cambio Climático</h2>
+        <div class="contenedor-textos">
+            <div class="tarjeta">
+                <img src="{{ url_for('static', filename='climate1.jpg') }}" alt="Cambio climático">
+                <h3>¿Qué es el cambio climático?</h3>
+                <p>El cambio climático se refiere al aumento gradual de la temperatura de la Tierra, causado principalmente por la emisión de gases de efecto invernadero.</p>
+            </div>
+
+            <div class="tarjeta">
+                <img src="{{ url_for('static', filename='climate2.jpg') }}" alt="Riesgos del cambio climático">
+                <h3>Riesgos de no concientizar</h3>
+                <ul>
+                    <li>Incremento de desastres naturales.</li>
+                    <li>Extinción de especies.</li>
+                    <li>Escasez de agua y alimentos.</li>
+                    <li>Problemas de salud global.</li>
+                </ul>
+            </div>
+
+            <div class="tarjeta">
+                <img src="{{ url_for('static', filename='climate3.jpg') }}" alt="Acciones ecológicas">
+                <h3>Cómo podemos ayudar</h3>
+                <ul>
+                    <li>Reducir el consumo de energía y agua.</li>
+                    <li>Usar transporte público o bicicletas.</li>
+                    <li>Reciclar y reducir residuos.</li>
+                    <li>Apoyar políticas de energías renovables.</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="https://www.un.org/es/climatechange/what-is-climate-change" target="_blank">
+            <button class="btn-clima">Aprender más sobre el cambio climático 🌱</button>
+        </a>
+    </section>
+
+    <footer id="contacto">
+        <p>2025 Proyecto Ecológico — Cuidemos el planeta juntos ♻️</p>
+    </footer>
+</body>
+</html>

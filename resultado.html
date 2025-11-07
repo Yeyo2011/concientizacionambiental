@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado - Huella de Carbono</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="resultado-container">
+        <h1>Tu Huella de Carbono</h1>
+
+        <div class="resultado-card">
+            <p>Gracias por responder las preguntas. Tu huella de carbono estimada es:</p>
+            <h2>{{ resultado }} toneladas de CO₂ por año</h2>
+
+            {% if resultado < 2 %}
+                <p class="mensaje verde">🌿 ¡Excelente! Tu impacto ambiental es bajo. Continúa con tus hábitos sostenibles.</p>
+            {% elif resultado < 5 %}
+                <p class="mensaje amarillo">🌍 Tienes una huella media. Puedes mejorar con pequeños cambios en transporte y consumo.</p>
+            {% else %}
+                <p class="mensaje rojo">🔥 Tu huella es alta. Considera reducir el uso de transporte privado y el consumo energético.</p>
+            {% endif %}
+        </div>
+
+        <a href="/" class="btn-volver">Volver al inicio</a>
+    </div>
+</body>
+</html>
